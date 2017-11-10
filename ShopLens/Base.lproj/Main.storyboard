@@ -10,11 +10,11 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="ShopLens" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9pv-A4-QxB" userLabel="Home View Controller" customClass="HomeViewController" customModule="ShopLens" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN" customClass="view">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="750" y="-320"/>
         </scene>
-        <!--Second View Controller-->
+        <!--Shopping List View Controller-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="ShopLens" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="List" useStoryboardIdentifierAsRestorationIdentifier="YES" id="8rJ-Kc-sve" customClass="ShoppingListViewController" customModule="ShopLens" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,29 +86,53 @@
             </objects>
             <point key="canvasLocation" x="750" y="360"/>
         </scene>
-        <!--View Controller-->
+        <!--Navi View Controller-->
         <scene sceneID="Is1-DN-c5D">
             <objects>
-                <viewController id="oPa-TX-Igs" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TJj-hC-Vg2">
+                <viewController storyboardIdentifier="Navi" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oPa-TX-Igs" customClass="NaviViewController" customModule="ShopLens" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TJj-hC-Vg2" customClass="navi" customModule="ShopLens" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xDz-hs-jvy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </arscnView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="LbQ-qn-o33"/>
                     </view>
                     <tabBarItem key="tabBarItem" image="navi" selectedImage="navi" id="Qcf-WJ-xox">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-12"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="sceneView" destination="xDz-hs-jvy" id="A4d-qd-qef"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3RS-tr-ozf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="1053"/>
+            <point key="canvasLocation" x="749.60000000000002" y="1052.9235382308846"/>
         </scene>
-        <!--View Controller-->
+        <!--Item Details View Controller-->
+        <scene sceneID="qgT-Wa-82J">
+            <objects>
+                <viewController storyboardIdentifier="ItemDetail" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vnb-qT-k5a" customClass="ItemDetailsViewController" customModule="ShopLens" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nHi-Tk-bNd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="BUd-Nq-H3m"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BD2-Fs-VMa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-668" y="1053"/>
+        </scene>
+        <!--Shopping Cart View Controller-->
         <scene sceneID="skp-gf-WG1">
             <objects>
-                <viewController id="rha-PC-pRI" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Tsk-in-zzf">
+                <viewController storyboardIdentifier="Cart" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rha-PC-pRI" customClass="ShoppingCartViewController" customModule="ShopLens" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tsk-in-zzf" customClass="Shoppingc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,10 +146,10 @@
             </objects>
             <point key="canvasLocation" x="759" y="1726"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="GPn-TE-9Fc">
             <objects>
-                <viewController id="GTE-22-0Ac" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="GTE-22-0Ac" customClass="ProfileViewController" customModule="ShopLens" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VZy-ss-eqd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -143,7 +167,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="Tab" useStoryboardIdentifierAsRestorationIdentifier="YES" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>

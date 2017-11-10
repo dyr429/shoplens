@@ -7,9 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B61AC44E1FB51D0000D44603 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B61AC44D1FB51D0000D44603 /* art.scnassets */; };
+		B6EE64101FB3BBF20091B60C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE640F1FB3BBF20091B60C /* ProfileViewController.swift */; };
+		B6EE64121FB3BC250091B60C /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE64111FB3BC250091B60C /* ShoppingCartViewController.swift */; };
+		B6EE64141FB5072B0091B60C /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE64131FB5072B0091B60C /* ItemDetailsViewController.swift */; };
+		B6EE64161FB50C5D0091B60C /* NaviViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE64151FB50C5D0091B60C /* NaviViewController.swift */; };
 		B6FDC46F1FB213940087E850 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDC46E1FB213940087E850 /* AppDelegate.swift */; };
-		B6FDC4711FB213940087E850 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDC4701FB213940087E850 /* FirstViewController.swift */; };
-		B6FDC4731FB213940087E850 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDC4721FB213940087E850 /* SecondViewController.swift */; };
+		B6FDC4711FB213940087E850 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDC4701FB213940087E850 /* HomeViewController.swift */; };
+		B6FDC4731FB213940087E850 /* ShoppingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDC4721FB213940087E850 /* ShoppingListViewController.swift */; };
 		B6FDC4761FB213940087E850 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FDC4741FB213940087E850 /* Main.storyboard */; };
 		B6FDC4781FB213940087E850 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6FDC4771FB213940087E850 /* Assets.xcassets */; };
 		B6FDC47B1FB213940087E850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FDC4791FB213940087E850 /* LaunchScreen.storyboard */; };
@@ -35,10 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B61AC44D1FB51D0000D44603 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		B6EE640F1FB3BBF20091B60C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B6EE64111FB3BC250091B60C /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
+		B6EE64131FB5072B0091B60C /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
+		B6EE64151FB50C5D0091B60C /* NaviViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviViewController.swift; sourceTree = "<group>"; };
 		B6FDC46B1FB213940087E850 /* ShopLens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShopLens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FDC46E1FB213940087E850 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B6FDC4701FB213940087E850 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		B6FDC4721FB213940087E850 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		B6FDC4701FB213940087E850 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		B6FDC4721FB213940087E850 /* ShoppingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingListViewController.swift; sourceTree = "<group>"; };
 		B6FDC4751FB213940087E850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B6FDC4771FB213940087E850 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B6FDC47A1FB213940087E850 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,8 +110,13 @@
 			isa = PBXGroup;
 			children = (
 				B6FDC46E1FB213940087E850 /* AppDelegate.swift */,
-				B6FDC4701FB213940087E850 /* FirstViewController.swift */,
-				B6FDC4721FB213940087E850 /* SecondViewController.swift */,
+				B6FDC4701FB213940087E850 /* HomeViewController.swift */,
+				B61AC44D1FB51D0000D44603 /* art.scnassets */,
+				B6EE64151FB50C5D0091B60C /* NaviViewController.swift */,
+				B6FDC4721FB213940087E850 /* ShoppingListViewController.swift */,
+				B6EE64131FB5072B0091B60C /* ItemDetailsViewController.swift */,
+				B6EE640F1FB3BBF20091B60C /* ProfileViewController.swift */,
+				B6EE64111FB3BC250091B60C /* ShoppingCartViewController.swift */,
 				B6FDC4741FB213940087E850 /* Main.storyboard */,
 				B6FDC4771FB213940087E850 /* Assets.xcassets */,
 				B6FDC4791FB213940087E850 /* LaunchScreen.storyboard */,
@@ -236,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6FDC47B1FB213940087E850 /* LaunchScreen.storyboard in Resources */,
+				B61AC44E1FB51D0000D44603 /* art.scnassets in Resources */,
 				B6FDC4781FB213940087E850 /* Assets.xcassets in Resources */,
 				B6FDC4761FB213940087E850 /* Main.storyboard in Resources */,
 			);
@@ -262,9 +278,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6FDC4731FB213940087E850 /* SecondViewController.swift in Sources */,
+				B6FDC4731FB213940087E850 /* ShoppingListViewController.swift in Sources */,
 				B6FDC46F1FB213940087E850 /* AppDelegate.swift in Sources */,
-				B6FDC4711FB213940087E850 /* FirstViewController.swift in Sources */,
+				B6EE64141FB5072B0091B60C /* ItemDetailsViewController.swift in Sources */,
+				B6EE64161FB50C5D0091B60C /* NaviViewController.swift in Sources */,
+				B6EE64101FB3BBF20091B60C /* ProfileViewController.swift in Sources */,
+				B6FDC4711FB213940087E850 /* HomeViewController.swift in Sources */,
+				B6EE64121FB3BC250091B60C /* ShoppingCartViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -431,10 +451,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G33WCJ3P9H;
+				DEVELOPMENT_TEAM = ECV479AC65;
 				INFOPLIST_FILE = ShopLens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hci.ShopLens;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs5340.ShopLens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -446,10 +466,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = G33WCJ3P9H;
+				DEVELOPMENT_TEAM = ECV479AC65;
 				INFOPLIST_FILE = ShopLens/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hci.ShopLens;
+				PRODUCT_BUNDLE_IDENTIFIER = com.cs5340.ShopLens;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
