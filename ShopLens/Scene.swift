@@ -24,10 +24,8 @@ class Scene: SKScene {
             return
         }
         
-        // Create anchor using the camera's current position
-        if let currentFrame = sceneView.session.currentFrame {
         sceneView.scene?.removeAllChildren()
-        }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
