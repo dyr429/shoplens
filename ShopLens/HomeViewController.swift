@@ -10,12 +10,26 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.becomeFirstResponder()
+        searchBar.showsScopeBar = true
+        searchBar.delegate = self as? UISearchBarDelegate
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    @IBAction func search(_ sender: UIButton) {
+        if("cereal".caseInsensitiveCompare(searchBar.text!) == ComparisonResult.orderedSame){
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "cerealResult") as! cerealResultViewController
+            self.present(nextViewController, animated: true, completion: nil)
+        }else{
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "icecreamResult") as! icecreamResultViewController
+            self.present(nextViewController, animated: true, completion: nil)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -37,6 +51,9 @@ class HomeViewController: UIViewController {
             self.present(nextViewController, animated: true, completion: nil)
         }
     }
+    
+    
+    
 
 
 }

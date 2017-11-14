@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		B61AC44E1FB51D0000D44603 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = B61AC44D1FB51D0000D44603 /* art.scnassets */; };
 		B61AC4501FB56C4800D44603 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B61AC44F1FB56C4800D44603 /* Assets.xcassets */; };
+		B66ED4DF1FBAB3C600F2DFE9 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = B66ED4DD1FBAB3C600F2DFE9 /* Scene.sks */; };
+		B66ED4E01FBAB3C600F2DFE9 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66ED4DE1FBAB3C600F2DFE9 /* Scene.swift */; };
+		B69CB7131FB822D600D06AA7 /* NewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69CB7121FB822D600D06AA7 /* NewListViewController.swift */; };
+		B6A848ED1FB82D6000DBD7FA /* cerealResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A848EC1FB82D6000DBD7FA /* cerealResultViewController.swift */; };
+		B6A848EF1FB82D7500DBD7FA /* icecreamResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6A848EE1FB82D7500DBD7FA /* icecreamResultViewController.swift */; };
 		B6EE64101FB3BBF20091B60C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE640F1FB3BBF20091B60C /* ProfileViewController.swift */; };
 		B6EE64121FB3BC250091B60C /* ShoppingCartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE64111FB3BC250091B60C /* ShoppingCartViewController.swift */; };
 		B6EE64141FB5072B0091B60C /* ItemDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6EE64131FB5072B0091B60C /* ItemDetailsViewController.swift */; };
@@ -42,6 +47,11 @@
 /* Begin PBXFileReference section */
 		B61AC44D1FB51D0000D44603 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		B61AC44F1FB56C4800D44603 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		B66ED4DD1FBAB3C600F2DFE9 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
+		B66ED4DE1FBAB3C600F2DFE9 /* Scene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Scene.swift; sourceTree = "<group>"; };
+		B69CB7121FB822D600D06AA7 /* NewListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewListViewController.swift; sourceTree = "<group>"; };
+		B6A848EC1FB82D6000DBD7FA /* cerealResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cerealResultViewController.swift; sourceTree = "<group>"; };
+		B6A848EE1FB82D7500DBD7FA /* icecreamResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icecreamResultViewController.swift; sourceTree = "<group>"; };
 		B6EE640F1FB3BBF20091B60C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		B6EE64111FB3BC250091B60C /* ShoppingCartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartViewController.swift; sourceTree = "<group>"; };
 		B6EE64131FB5072B0091B60C /* ItemDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailsViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +119,8 @@
 		B6FDC46D1FB213940087E850 /* ShopLens */ = {
 			isa = PBXGroup;
 			children = (
+				B66ED4DD1FBAB3C600F2DFE9 /* Scene.sks */,
+				B66ED4DE1FBAB3C600F2DFE9 /* Scene.swift */,
 				B6FDC46E1FB213940087E850 /* AppDelegate.swift */,
 				B6FDC4701FB213940087E850 /* HomeViewController.swift */,
 				B61AC44D1FB51D0000D44603 /* art.scnassets */,
@@ -121,6 +133,9 @@
 				B6FDC4741FB213940087E850 /* Main.storyboard */,
 				B6FDC4791FB213940087E850 /* LaunchScreen.storyboard */,
 				B6FDC47C1FB213940087E850 /* Info.plist */,
+				B69CB7121FB822D600D06AA7 /* NewListViewController.swift */,
+				B6A848EC1FB82D6000DBD7FA /* cerealResultViewController.swift */,
+				B6A848EE1FB82D7500DBD7FA /* icecreamResultViewController.swift */,
 			);
 			path = ShopLens;
 			sourceTree = "<group>";
@@ -254,6 +269,7 @@
 				B61AC44E1FB51D0000D44603 /* art.scnassets in Resources */,
 				B61AC4501FB56C4800D44603 /* Assets.xcassets in Resources */,
 				B6FDC4761FB213940087E850 /* Main.storyboard in Resources */,
+				B66ED4DF1FBAB3C600F2DFE9 /* Scene.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,10 +297,14 @@
 				B6FDC4731FB213940087E850 /* ShoppingListViewController.swift in Sources */,
 				B6FDC46F1FB213940087E850 /* AppDelegate.swift in Sources */,
 				B6EE64141FB5072B0091B60C /* ItemDetailsViewController.swift in Sources */,
+				B69CB7131FB822D600D06AA7 /* NewListViewController.swift in Sources */,
 				B6EE64161FB50C5D0091B60C /* NaviViewController.swift in Sources */,
 				B6EE64101FB3BBF20091B60C /* ProfileViewController.swift in Sources */,
+				B6A848ED1FB82D6000DBD7FA /* cerealResultViewController.swift in Sources */,
 				B6FDC4711FB213940087E850 /* HomeViewController.swift in Sources */,
+				B6A848EF1FB82D7500DBD7FA /* icecreamResultViewController.swift in Sources */,
 				B6EE64121FB3BC250091B60C /* ShoppingCartViewController.swift in Sources */,
+				B66ED4E01FBAB3C600F2DFE9 /* Scene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
