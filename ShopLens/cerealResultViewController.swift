@@ -10,6 +10,8 @@ import UIKit
 
 class cerealResultViewController: UIViewController {
     @IBAction func addToCart(_ sender: UIButton) {
+        saveData(value:String(describing: self))
+
         let alertController = UIAlertController(title: "Adding to cart",
                                                 message: "how many do you want?", preferredStyle: .alert)
         
@@ -30,6 +32,8 @@ class cerealResultViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        saveData(value:String(describing: self))
+
         super.viewDidLoad()
         
     }

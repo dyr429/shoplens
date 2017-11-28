@@ -15,6 +15,8 @@ class ItemDetailsViewController: UIViewController, ARSKViewDelegate  {
     @IBOutlet weak var sceneView: ARSKView!
     
     override func viewDidLoad() {
+        saveData(value:String(describing: self))
+
         super.viewDidLoad()
         
         // Set the view's delegate
@@ -31,6 +33,7 @@ class ItemDetailsViewController: UIViewController, ARSKViewDelegate  {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         
         // Create a session configuration
@@ -55,6 +58,9 @@ class ItemDetailsViewController: UIViewController, ARSKViewDelegate  {
     // MARK: - ARSKViewDelegate
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
+        
+        saveData(value:String(describing: self))
+
         // Create and configure a node for the anchor added to the view's session.
         var imageName : String
         if(tap == 0){
@@ -93,6 +99,8 @@ class ItemDetailsViewController: UIViewController, ARSKViewDelegate  {
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         
+        saveData(value:String(describing: self))
+
         if motion == .motionShake {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Tab") as! UITabBarController

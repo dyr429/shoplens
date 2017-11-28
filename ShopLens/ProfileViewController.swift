@@ -11,11 +11,15 @@ import UIKit
 class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
+        saveData(value:String(describing: self))
+
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func didReceiveMemoryWarning() {
+        saveData(value:String(describing: self))
+
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }

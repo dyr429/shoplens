@@ -14,6 +14,8 @@ class NewListViewController: UIViewController {
     @IBOutlet weak var catImage: UIImageView!
     
     override func viewDidLoad() {
+        saveData(value:String(describing: self))
+
         super.viewDidLoad()
         dogImage.alpha = 0.5
         catImage.alpha = 0.5
@@ -34,6 +36,8 @@ class NewListViewController: UIViewController {
     
     @objc func dogimageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
+        saveData(value:String(describing: self))
+
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         
         tappedImage.alpha = 1.0
@@ -41,6 +45,8 @@ class NewListViewController: UIViewController {
     
     @objc func catimageTapped(tapGestureRecognizer: UITapGestureRecognizer)
     {
+        saveData(value:String(describing: self))
+
         let tappedImage = tapGestureRecognizer.view as! UIImageView
         
         tappedImage.alpha = 1.0

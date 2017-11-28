@@ -11,6 +11,8 @@ import UIKit
 class ShoppingListViewController: UIViewController {
 
     override func viewDidLoad() {
+        saveData(value:String(describing: self))
+
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }

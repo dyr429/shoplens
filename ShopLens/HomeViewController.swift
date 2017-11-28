@@ -7,18 +7,26 @@
 //
 
 import UIKit
+import Foundation.NSDate
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
+
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.becomeFirstResponder()
         searchBar.showsScopeBar = true
         searchBar.delegate = self as? UISearchBarDelegate
         // Do any additional setup after loading the view, typically from a nib.
+        
+        saveData(value:String(describing: self))
     }
+    
     @IBAction func search(_ sender: UIButton) {
+        saveData(value:String(describing: self))
+
         if("cereal".caseInsensitiveCompare(searchBar.text!) == ComparisonResult.orderedSame){
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "cerealResult") as! cerealResultViewController
@@ -27,6 +35,7 @@ class HomeViewController: UIViewController {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "icecreamResult") as! icecreamResultViewController
             self.present(nextViewController, animated: true, completion: nil)
+     
         }
     }
     
@@ -37,6 +46,7 @@ class HomeViewController: UIViewController {
     
     // We are willing to become first responder to get shake motion
     override var canBecomeFirstResponder: Bool {
+
         get {
             return true
         }
@@ -45,16 +55,15 @@ class HomeViewController: UIViewController {
     // Enable detection of shake motion
     override func motionEnded(_ motion: UIEventSubtype, with event: UIEvent?) {
         
+        saveData(value:String(describing: self))
+        
         if motion == .motionShake {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "ItemDetail") as! ItemDetailsViewController
             self.present(nextViewController, animated: true, completion: nil)
         }
     }
-    
-    
-    
-
 
 }
+
 

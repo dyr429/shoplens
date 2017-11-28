@@ -36,9 +36,13 @@ class NaviViewController: UIViewController, ARSCNViewDelegate {
 
         scene.rootNode.addChildNode(textNode)
         sceneView.scene = scene
+        saveData(value:String(describing: self))
+
     }
     
     func textIndicator(position: SCNVector3, scale: SCNVector3, content: String)->SCNNode{
+        saveData(value:String(describing: self))
+
         let text = SCNText(string: content, extrusionDepth: 0)
         text.firstMaterial?.diffuse.contents = UIColor.green
         text.font = UIFont(name: "Helvetica", size: 0.4)
@@ -50,6 +54,7 @@ class NaviViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         super.viewWillAppear(animated)
         
         // Create a session configuration
@@ -60,6 +65,8 @@ class NaviViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
+        saveData(value:String(describing: self))
+
         super.viewWillDisappear(animated)
         
         // Pause the view's session
@@ -67,6 +74,8 @@ class NaviViewController: UIViewController, ARSCNViewDelegate {
     }
     
     override func didReceiveMemoryWarning() {
+        saveData(value:String(describing: self))
+
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
@@ -88,16 +97,22 @@ class NaviViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func sessionWasInterrupted(_ session: ARSession) {
+        saveData(value:String(describing: self))
+
         // Inform the user that the session has been interrupted, for example, by presenting an overlay
         
     }
     
     func sessionInterruptionEnded(_ session: ARSession) {
+        saveData(value:String(describing: self))
+
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
     
     @IBAction func deletePicture1(_ sender: UIButton) {
+        saveData(value:String(describing: self))
+
         picture1.alpha = 0
         deleteP1.alpha = 0
         
@@ -117,6 +132,8 @@ class NaviViewController: UIViewController, ARSCNViewDelegate {
     }
     
     @IBAction func deletePicture2(_ sender: UIButton) {
+        saveData(value:String(describing: self))
+
         picture2.alpha = 0
         deleteP2.alpha = 0
     }

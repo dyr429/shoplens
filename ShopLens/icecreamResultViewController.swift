@@ -11,6 +11,8 @@ class icecreamResultViewController: UIViewController {
     
     
     @IBAction func addToCart(_ sender: UIButton) {
+        saveData(value:String(describing: self))
+
         let alertController = UIAlertController(title: "Adding to cart",
                                                 message: "how many do you want?", preferredStyle: .alert)
         
@@ -30,11 +32,14 @@ class icecreamResultViewController: UIViewController {
         
     }
     override func viewDidLoad() {
+        saveData(value:String(describing: self))
+
         super.viewDidLoad()
         
     }
     
     override func didReceiveMemoryWarning() {
+        saveData(value:String(describing: self))
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
