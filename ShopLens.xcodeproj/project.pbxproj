@@ -25,9 +25,9 @@
 		B6FDC47B1FB213940087E850 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B6FDC4791FB213940087E850 /* LaunchScreen.storyboard */; };
 		B6FDC4861FB213940087E850 /* ShopLensTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDC4851FB213940087E850 /* ShopLensTests.swift */; };
 		B6FDC4911FB213940087E850 /* ShopLensUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6FDC4901FB213940087E850 /* ShopLensUITests.swift */; };
-		EE045B221FCD35D7000D0056 /* logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE045B211FCD35D7000D0056 /* logger.swift */; };
-		EE045B241FCD35E6000D0056 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE045B231FCD35E6000D0056 /* Data.plist */; };
 		EE33CEE21FCD6075007ABBEB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE33CEE11FCD6075007ABBEB /* Info.plist */; };
+		EE82C8B91FCE7B7000E1B282 /* Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE82C8B81FCE7B7000E1B282 /* Data.plist */; };
+		EE82C8BB1FCE7BA700E1B282 /* logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE82C8BA1FCE7BA700E1B282 /* logger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,9 +71,9 @@
 		B6FDC48C1FB213940087E850 /* ShopLensUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShopLensUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6FDC4901FB213940087E850 /* ShopLensUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopLensUITests.swift; sourceTree = "<group>"; };
 		B6FDC4921FB213940087E850 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EE045B211FCD35D7000D0056 /* logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = logger.swift; path = ../../SwiftyPlistManager/SwiftyPlistManager/logger.swift; sourceTree = "<group>"; };
-		EE045B231FCD35E6000D0056 /* Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Data.plist; path = ../../SwiftyPlistManager/SwiftyPlistManager/Data.plist; sourceTree = "<group>"; };
 		EE33CEE11FCD6075007ABBEB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE82C8B81FCE7B7000E1B282 /* Data.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Data.plist; path = ../Data.plist; sourceTree = "<group>"; };
+		EE82C8BA1FCE7BA700E1B282 /* logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = logger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,11 +124,11 @@
 		B6FDC46D1FB213940087E850 /* ShopLens */ = {
 			isa = PBXGroup;
 			children = (
+				EE82C8B81FCE7B7000E1B282 /* Data.plist */,
+				EE82C8BA1FCE7BA700E1B282 /* logger.swift */,
 				B66ED4DD1FBAB3C600F2DFE9 /* Scene.sks */,
 				B66ED4DE1FBAB3C600F2DFE9 /* Scene.swift */,
-				EE045B231FCD35E6000D0056 /* Data.plist */,
 				B6FDC46E1FB213940087E850 /* AppDelegate.swift */,
-				EE045B211FCD35D7000D0056 /* logger.swift */,
 				B6FDC4701FB213940087E850 /* HomeViewController.swift */,
 				B61AC44D1FB51D0000D44603 /* art.scnassets */,
 				B6EE64151FB50C5D0091B60C /* NaviViewController.swift */,
@@ -272,8 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE82C8B91FCE7B7000E1B282 /* Data.plist in Resources */,
 				EE33CEE21FCD6075007ABBEB /* Info.plist in Resources */,
-				EE045B241FCD35E6000D0056 /* Data.plist in Resources */,
 				B6FDC47B1FB213940087E850 /* LaunchScreen.storyboard in Resources */,
 				B61AC44E1FB51D0000D44603 /* art.scnassets in Resources */,
 				B61AC4501FB56C4800D44603 /* Assets.xcassets in Resources */,
@@ -306,7 +306,6 @@
 				B6FDC4731FB213940087E850 /* ShoppingListViewController.swift in Sources */,
 				B6FDC46F1FB213940087E850 /* AppDelegate.swift in Sources */,
 				B6EE64141FB5072B0091B60C /* ItemDetailsViewController.swift in Sources */,
-				EE045B221FCD35D7000D0056 /* logger.swift in Sources */,
 				B69CB7131FB822D600D06AA7 /* NewListViewController.swift in Sources */,
 				B6EE64161FB50C5D0091B60C /* NaviViewController.swift in Sources */,
 				B6EE64101FB3BBF20091B60C /* ProfileViewController.swift in Sources */,
@@ -315,6 +314,7 @@
 				B6A848EF1FB82D7500DBD7FA /* icecreamResultViewController.swift in Sources */,
 				B6EE64121FB3BC250091B60C /* ShoppingCartViewController.swift in Sources */,
 				B66ED4E01FBAB3C600F2DFE9 /* Scene.swift in Sources */,
+				EE82C8BB1FCE7BA700E1B282 /* logger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

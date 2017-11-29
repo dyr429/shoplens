@@ -1,3 +1,11 @@
+//
+//  logger.swift
+//  ShopLens
+//
+//  Created by mx on 11/29/17.
+//  Copyright © 2017 Alex Ding. All rights reserved.
+//
+
 
 import Foundation
 
@@ -49,7 +57,7 @@ struct Plist {
             guard let dict = NSDictionary(contentsOfFile: destPath!) else { return .none }
             return dict
         } else {
-            throw SwiftyPlistManagerError.fileDoesNotExist
+            throw loggerError.fileDoesNotExist
         }
     }
     
@@ -68,17 +76,17 @@ struct Plist {
         if fileManager.fileExists(atPath: destPath!) {
             if !dictionary.write(toFile: destPath!, atomically: false) {
                 plistManagerPrint("File not written successfully")
-                throw SwiftyPlistManagerError.fileNotWritten
+                throw loggerError.fileNotWritten
             }
         } else {
             plistManagerPrint("File does not exist")
-            throw SwiftyPlistManagerError.fileDoesNotExist
+            throw loggerError.fileDoesNotExist
         }
     }
     
 }
 
-public enum SwiftyPlistManagerError: Error {
+public enum loggerError: Error {
     case fileNotWritten
     case fileDoesNotExist
     case fileUnavailable
@@ -87,9 +95,9 @@ public enum SwiftyPlistManagerError: Error {
     case keyValuePairDoesNotExist
 }
 
-public class SwiftyPlistManager {
+public class logger {
     
-    public static let shared = SwiftyPlistManager()
+    public static let shared = logger()
     private init() {} //This prevents others from using the default '()' initializer for this class.
     
     var logPlistManager: Bool = false
@@ -98,7 +106,7 @@ public class SwiftyPlistManager {
         
         logPlistManager = logging
         
-        plistManagerPrint("Starting SwiftyPlistManager . . .")
+        plistManagerPrint("Starting logger . . .")
         
         var itemCount = 0
         for plistName in plistNames {
@@ -114,7 +122,7 @@ public class SwiftyPlistManager {
         
     }
     
-    public func addNew(_ value: Any, key: String, toPlistWithName: String, completion:(_ error :SwiftyPlistManagerError?) -> ()) {
+    public func addNew(_ value: Any, key: String, toPlistWithName: String, completion:(_ error :loggerError?) -> ()) {
         plistManagerPrint("Starting to add value '\(value)' for key '\(key)' to '\(toPlistWithName).plist' . . .")
         if !keyAlreadyExists(key: key, inPlistWithName: toPlistWithName) {
             if let plist = Plist(name: toPlistWithName) {
@@ -132,7 +140,7 @@ public class SwiftyPlistManager {
                     completion(nil)
                 } catch {
                     plistManagerPrint(error)
-                    completion(error as? SwiftyPlistManagerError)
+                    completion(error as? loggerError)
                 }
                 
                 logAction(for: plist, withPlistName: toPlistWithName)
@@ -149,7 +157,7 @@ public class SwiftyPlistManager {
         
     }
     
-    public func removeKeyValuePair(for key: String, fromPlistWithName: String, completion:(_ error :SwiftyPlistManagerError?) -> ()) {
+    public func removeKeyValuePair(for key: String, fromPlistWithName: String, completion:(_ error :loggerError?) -> ()) {
         plistManagerPrint("Starting to remove Key-Value pair for '\(key)' from '\(fromPlistWithName).plist' . . .")
         if keyAlreadyExists(key: key, inPlistWithName: fromPlistWithName) {
             if let plist = Plist(name: fromPlistWithName) {
@@ -166,7 +174,7 @@ public class SwiftyPlistManager {
                     completion(nil)
                 } catch {
                     plistManagerPrint(error)
-                    completion(error as? SwiftyPlistManagerError)
+                    completion(error as? loggerError)
                 }
                 
                 logAction(for: plist, withPlistName: fromPlistWithName)
@@ -182,7 +190,7 @@ public class SwiftyPlistManager {
         
     }
     
-    public func removeAllKeyValuePairs(fromPlistWithName: String, completion:(_ error :SwiftyPlistManagerError?) -> ()) {
+    public func removeAllKeyValuePairs(fromPlistWithName: String, completion:(_ error :loggerError?) -> ()) {
         
         if let plist = Plist(name: fromPlistWithName) {
             
@@ -207,7 +215,7 @@ public class SwiftyPlistManager {
                 completion(nil)
             } catch {
                 plistManagerPrint(error)
-                completion(error as? SwiftyPlistManagerError)
+                completion(error as? loggerError)
             }
             
             logAction(for: plist, withPlistName: fromPlistWithName)
@@ -218,7 +226,7 @@ public class SwiftyPlistManager {
         }
     }
     
-    public func save(_ value: Any, forKey: String, toPlistWithName: String, completion:(_ error :SwiftyPlistManagerError?) -> ()) {
+    public func save(_ value: Any, forKey: String, toPlistWithName: String, completion:(_ error :loggerError?) -> ()) {
         
         if let plist = Plist(name: toPlistWithName) {
             
@@ -243,7 +251,7 @@ public class SwiftyPlistManager {
                 completion(nil)
             } catch {
                 plistManagerPrint(error)
-                completion(error as? SwiftyPlistManagerError)
+                completion(error as? loggerError)
             }
             
             logAction(for: plist, withPlistName: toPlistWithName)
@@ -298,7 +306,7 @@ public class SwiftyPlistManager {
         }
     }
     
-    public func getValue(for key: String, fromPlistWithName: String, completion:(_ result : Any?, _ error :SwiftyPlistManagerError?) -> ()) {
+    public func getValue(for key: String, fromPlistWithName: String, completion:(_ result : Any?, _ error :loggerError?) -> ()) {
         var value:Any?
         
         if let plist = Plist(name: fromPlistWithName) {
@@ -397,8 +405,8 @@ public class SwiftyPlistManager {
 }
 
 func plistManagerPrint(_ text: Any) {
-    if SwiftyPlistManager.shared.logPlistManager {
-        print("[SwiftyPlistManager]", text)
+    if logger.shared.logPlistManager {
+        print("[logger]", text)
     }
 }
 
@@ -410,11 +418,12 @@ func saveData(value: String,function: String = #function) {
     timeFormatter.dateFormat = "yyy-MM-dd HH:mm:ss.SSS"
     var strNowTime = timeFormatter.string(from: date as Date) as String
     let value1 = "from " + value + "  function name  " + function
-    SwiftyPlistManager.shared.addNew(value1, key: strNowTime, toPlistWithName: "Data") { (err) in
+    logger.shared.addNew(value1, key: strNowTime, toPlistWithName: "Data") { (err) in
         if err == nil {
             print("Value successfully added into plist.")
         }
     }
 }
+
 
 
