@@ -55,7 +55,7 @@ You shake your phone again, and it goes back to navigation(due to resources acce
 go to window->device and simulator. select your device and find data record in device. In small cog, select download container. the data is in the first folder of download package. named data.plist.
 
 ### calculate the time user cost to finish each task
-check start function time stamp to calculate
+check start function time stamp to calculate(use second). fill in sheet in google drive 
 
 
   
