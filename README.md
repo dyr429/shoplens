@@ -21,7 +21,7 @@ type in a list name and select the person you want to share this list
 click OK
 You will find a new shopping list has been added. 
 
-2. Home Page/ Search Items(start: viewdidload in homeviewcontroller, there will be several of them, be careuful)
+4. Home Page/ Search Items(start: viewdidload in homeviewcontroller, there will be several of them, be careuful)
 Click on home tab at bottom
 Click on search bar.
 Example of search: Type in “ice cream” in text field and click search. 
@@ -32,7 +32,7 @@ Click on search bar again ,  type in “cereal” and click search
 From list for cereal, click on “add to list” button of “cinnamon raisin ”.
 Shopping list will show now, and click on the “mylist” you just created.
 
-3. Navigation (start: viewdidload in navigationviewcontroller)
+5. Navigation (start: viewdidload in navigationviewcontroller)
 Now the shopping cart has a 2 symbol on it, which means you have two item in shopping cart
 Click on navigation icon at the bottom to start navigation
 Now follow the arrow on ground to find first item: cereal.
@@ -41,7 +41,7 @@ Follow the arrow on ground to find ice cream
 When you find cereal, put one in your shopping cart. And press X button on that item in shopping list.
 
 
-4.Check Item Details(start: viewdidload in itemdetailsviewcontroller)
+6.Check Item Details(start: viewdidload in itemdetailsviewcontroller)
 Go back to home page by clicking back button on top left
 You shake your phone to open check item details function.(due to resource access limitation, click on camera)
 You aim your camera to Oreo and click on it
